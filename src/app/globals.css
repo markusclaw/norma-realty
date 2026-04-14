@@ -1,45 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #111827;
-  background: #ffffff;
-  line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-}
-
-.font-serif {
-  font-family: 'Playfair Display', serif;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-button {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Tailwind base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
