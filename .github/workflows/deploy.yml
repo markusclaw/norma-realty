@@ -28,4 +28,4 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: c60d73bd6bdd2bfa6aba42a117a4b69e
         run: |
           npm install -g wrangler
-          wrangler pages deploy .next/standalone --project-name=norma-realty
+          wrangler pages deploy . --project-name=norma-realty
